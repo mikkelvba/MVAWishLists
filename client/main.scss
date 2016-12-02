@@ -1,0 +1,151 @@
+@import "{}/node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+$black: #222222;
+$white: #fefefe;
+
+body {
+  background: $white;
+  color: $black;
+}
+
+.limiter {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav.navbar.navbar-light.bg-faded {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: 0;
+}
+.limiter > app > div {
+  margin-top: 100px;
+  position: relative;
+}
+ul.nav.navbar-nav {
+  line-height: 40px;
+  position: relative;
+  left: 50px;
+}
+.wishlist-form {
+  display: block;
+  width: 100%;
+}
+.searchForm {
+  position: absolute;
+  top: -37px;
+  right: 0;
+}
+.wishlist-form {
+  float: left;
+  width: 30%;
+  label {
+    margin-bottom: 0rem;
+  }
+}
+.wish-full-list {
+  float: left;
+  width: 70%;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+}
+li {
+  list-style: none;
+}
+.row.wish-full-list ul li {
+  width: 32%;
+  margin-left: 1.33%;
+  margin-bottom: 15px;
+  float: right;
+  border: solid 2px #ddd;
+  background: #dddddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  position: relative;
+  p {
+    margin-bottom: 0;
+  }
+  div {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    button {
+      background-color: indianred;
+      border: solid 1px indianred;
+      border-radius: 50px;
+      padding: 0px 5px;
+      font-size: 12px;
+    }
+    a {
+      font-size: 12px;
+      color: teal;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+  }
+}
+
+
+button {
+  background-color: #212121;
+  border: none;
+  color: white;
+  padding: 3px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+li.published-true {
+  background: #B6F0AD !important;
+  border-color: #B6F0AD !important;
+}
+
+
+span.color-green {
+  color: #B6F0AD;
+  background: #B6F0AD;
+  border-radius: 50px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+span.color-gray {
+  color: #cccccc;
+  background: #cccccc;
+  border-radius: 50px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+
+.login-buttons[_ngcontent-bpa-2] .accounts-close[_ngcontent-bpa-2] {
+  color: indianred !important;
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 800px) {
+  .wishlist-form {
+    width: 100%;
+  }
+  .wish-full-list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row.wish-full-list ul li {
+    width: 100%;
+    margin-left: 0%;
+  }
+}

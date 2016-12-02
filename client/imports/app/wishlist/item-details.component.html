@@ -1,0 +1,15 @@
+<h2>Edit item</h2>
+<form *ngIf="item" (submit)="saveItem()">
+  <label>Item</label>
+  <input type="text" [(ngModel)]="item.itemName" name="itemName">
+
+  <label>Description (or link)</label>
+  <input type="text" [(ngModel)]="item.description" name="description">
+
+  <label>Price</label>
+  <input type="number" [(ngModel)]="item.price" name="price">
+
+
+  <button type="submit">Save</button>
+  <a [routerLink]="['/']">Go back</a>
+</form>

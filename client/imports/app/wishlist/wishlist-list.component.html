@@ -1,0 +1,23 @@
+<div>
+    <!--<login-buttons></login-buttons>-->
+    <wishlist-form class="wishlist-form"></wishlist-form>
+    <div class="searchForm">
+        <input type="text" #searchtext placeholder="Search by Full Name">
+        <button type="button" (click)="search(searchtext.value)">Search</button>
+    </div>
+    <div class="row wish-full-list">
+            <ul>
+                <li *ngFor="let item of wishlist | async" class="published-{{item.public}}">
+                    <p><strong>Title:</strong> {{item.itemName}}</p>
+                    <p><strong>Store:</strong> {{item.description}}</p>
+                    <p><strong>Price:</strong> {{item.price}} kr.</p>
+                    <div [hidden]="!isOwner(item)">
+                    <a [routerLink]="['/item', item._id]">Edit</a>
+                    <button (click)="removeItem(item)">X</button>
+                    </div>
+                </li>
+            </ul>
+
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+<!--
+<form [formGroup]="addForm" (ngSubmit)="addItem()">
+    <input type="text" placeholder="Item" formControlName="itemName">
+
+    <input type="text" placeholder="Description (or link)" formControlName="description">
+
+    <input placeholder="Price" type="number" formControlName="price">
+
+    <span class="publicChkbox"><label>Public</label><input type="checkbox" formControlName="public"></span>
+
+    <button type="submit">Add</button>
+</form>
+-->
+
+
+<div class="container">
+    <div class="jumbotron">
+    <p>
+        You must be logged in to create a wishlists and thereby add wishes to it.
+    </p>
+    <p>
+        <span class="color-green">・</span>Public Wish<br>
+        <span class="color-gray">・</span>Private Wish
+    </p>
+    <h3>Add wish</h3>
+    <form [formGroup]="addForm" (ngSubmit)="addItem()">
+        <div class="form-group">
+            <label class="control-label" for="email">Name</label>
+            <div>
+                <input type="text" placeholder="Item" formControlName="itemName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="pwd">Store</label>
+            <div>
+                <input type="text" placeholder="Description (or link)" formControlName="description">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="pwd">Price</label>
+            <div>
+                <input placeholder="Price" type="number" formControlName="price">
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <div class="checkbox">
+                    <span class="publicChkbox">
+                        <label>Publish</label>
+                        <input type="checkbox" formControlName="public">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <button type="submit">Add</button>
+            </div>
+        </div>
+    </form>
+        </div>
+</div>
